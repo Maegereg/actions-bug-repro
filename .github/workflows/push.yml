@@ -1,0 +1,14 @@
+name: Push pipeline
+
+on:
+  push:
+
+jobs:
+  Test-default-checkout-location:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Run foo action
+        uses: ./.github/actions/foo
+

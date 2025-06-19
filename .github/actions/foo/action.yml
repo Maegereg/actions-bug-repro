@@ -1,0 +1,7 @@
+name: 'Foo'
+description: 'Test action please ignore.'
+runs:
+  using: "composite"
+  steps:
+    - run: echo "FOO"
+      shell: bash

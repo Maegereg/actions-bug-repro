@@ -12,3 +12,13 @@ jobs:
       - name: Run foo action
         uses: ./.github/actions/foo
 
+  Test-custom-checkout-location:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          path: code
+      - name: Run foo action
+        uses: ./code/.github/actions/foo
+
